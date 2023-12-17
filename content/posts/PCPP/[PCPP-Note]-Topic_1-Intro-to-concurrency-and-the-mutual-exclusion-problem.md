@@ -107,7 +107,7 @@ running on the same processor.
  * Each threads works at its own speed (cant make assumption)
  * Each thread has its own local memory
  * Threads can communicate via shared memory
- * <img src="../../../../resources/_gen/images/pcpp/2.png" alt="" width="20%">
+ * <img src="../../../static/images/pcpp//2.png" alt="" width="20%">
 ### a. Problem in concurrent program
 
 ```java
@@ -149,7 +149,7 @@ To answer this question we need to understand
   * The statements in a thread are executed when the thread is in its “running” state 
 
 
-  * <img src="../../../../resources/_gen/images/pcpp/1.png" alt="" width="50%">
+  * <img src="../../../static/images/pcpp/1.png" alt="" width="50%">
 * **<span style="color:DarkTurquoise;">Non-determinism </span>**
   * In OS, scheduler selects the processes/threads to be execute
   * Threads are selected <span style="color:red;">non-deterministically</span>, i.e., no assumptions can be made about what thread will be executed next
