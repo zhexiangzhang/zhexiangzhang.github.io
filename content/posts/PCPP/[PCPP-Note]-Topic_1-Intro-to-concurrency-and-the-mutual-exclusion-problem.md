@@ -107,7 +107,11 @@ running on the same processor.
  * Each threads works at its own speed (cant make assumption)
  * Each thread has its own local memory
  * Threads can communicate via shared memory
- * <img src="../../../static/images/pcpp//2.png" alt="" width="20%">
+ * <img src="../../../static/images/pcpp/1.png" alt="" width="30%">
+
+    * Blocked state: eg: When a thread tries to access a synchronized block or method, but another thread already holds the lock.The thread will move from the blocked state to runnable state when it acquires the lock.
+    * Waiting state (not in this picture): The thread will be in waiting state when it calls wait() method or join() method. It will move to the runnable state when other thread will notify.
+    - note: this simplifid lifecycle merge Blocked and Waiting state together
 ### a. Problem in concurrent program
 
 ```java
@@ -230,11 +234,11 @@ operations
 ### b. Solve the problem
 * **<span style="color:RoyalBlue;">Critical sections </span>**
   * A critical section is a part of the program that only one thread can execute at the same time（to avoid race conditions）
-  * Critical sections should cover the parts of the code handling 
+  * Critical sections should cover the parts of the code handling shared memory
       ```java
     public class Turnstile extends Thread {
         public void run() {
-            for (int i = 0; i < PEOPLE; i++) { // not access shared memory, no need to protect
+            for (int i = 0; i < PEOPLE; i++) { // 'for' not access shared memory, no need to protect
                 // start critical section
                 int temp = counter;
                 counter = temp + 1;
@@ -261,7 +265,7 @@ operations
                     int temp = counter; // 2
                     counter = temp + 1; // 3
                     l.unlock() // 4
-                }
+                }s
             }
         }
 
