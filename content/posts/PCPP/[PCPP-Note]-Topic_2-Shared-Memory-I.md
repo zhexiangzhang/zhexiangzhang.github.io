@@ -449,25 +449,40 @@ Just-In-Time (JIT) compiler is allowed to reorder java bytecode operations
     ```
     <u>Can this program output (0,0)?</u> Yes, due to lack of happens-before relation between operations the JVM is allowed to reorder them.
 
-<span style="color:red;">????????? see slide [reordering doesnt obey happed before (1)]</span>
+s<span style="color:red;">????????? see slide (P67) interleavings [reordering doesnt obey happed before (1)]</span>
 
 * Establishing a happen-before relation prevents (some) reordering.
     * The intrinsic monitor introduces happens-before relations: 
         - (monitor rule) 𝑜𝑛𝑒(𝑥 ≔ 𝑏) → 𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1) or
 𝑜𝑡ℎ𝑒𝑟(𝑦 ≔ 𝑎) → 𝑜𝑛𝑒(𝑎 ≔ 1)
     ```java    
+    /*
+        (monitor rule)
+            𝑜𝑛𝑒(𝑥 ≔ 𝑏) → 𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1) or 𝑜𝑡ℎ𝑒𝑟(𝑦 ≔ 𝑎) → 𝑜𝑛𝑒(𝑎 ≔ 1)
+        (program order rule)
+            𝑜𝑛𝑒(𝑎 ≔ 1) → 𝑜𝑛𝑒(𝑥 ≔ 𝑏) and 𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1) → 𝑜𝑡ℎ𝑒𝑟(𝑦 ≔ 𝑎)
+        Combining these relations, we have
+            1 𝑜𝑛𝑒(𝑎 ≔ 1) → 𝑜𝑛𝑒 (𝑥 ≔ 𝑏) → 𝑜𝑡ℎ𝑒𝑟 (𝑏 ≔ 1) → 𝑜𝑡ℎ𝑒𝑟 (𝑦 ≔ 𝑎)
+            2 𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1) → 𝑜𝑡ℎ𝑒𝑟 (𝑦 ≔ 𝑎) → 𝑜𝑛𝑒 (𝑎 ≔ 1) → 𝑜𝑛𝑒 (𝑥 ≔ 𝑏)
+
+        None of (0,0) interleaving is valid.
+    */
     // shared variables
     x=0;y=0;
     a=0;b=0;
 
     // Threads definition
     Thread one = new Thread(() -> {
-        a=1;   // x=b
-        x=b;   // a=1
+        synchronized (o) {
+            a=1;   
+            x=b;   
+        }
     });
     Thread other = new Thread(() -> {
-        b=1;   // y=a
-        y=a;   // b=1
+        synchronized (o) {
+            b=1;   
+            y=a;   
+        }
     });
 
     one.start();other.start();
@@ -476,9 +491,48 @@ Just-In-Time (JIT) compiler is allowed to reorder java bytecode operations
     ```
 
 ### **Visibility**
+#### weak form of synchronization
 * Java provides a weak form of synchronization via the variable/field modifier volatile
-* Volatile variables are not stored in CPU registers or low levels 
-of cache hidden from other CPUs
-  * Writes to volatile variables flush registers and low level 
-cache to shared memory levels
-* Volatile variables cannot be reordered
+* **[Ensure visibility]** Volatile variables are not stored in CPU registers or low levels of cache hidden from other CPUs
+  * Writes to volatile variables flush registers and low level cache to shared memory levels
+    * flashes memory for all variables in CPU registers/cache => ensures visibility to writes on non-volatile variables prior that of the volatile variable
+* **[Prevent reordering]** Volatile variables cannot be reordered
+* Volatile variables cannot be used to ensure mutual exclusion!  
+  * (lock can ensure mutual exclusion, also ensure visibility and prevent reordering, but volatile variables may have a lower impact in performance.)
+#### volatile | happens-before
+* A write to a volatile variable happens before any subsequent read to the volatile variable
+    ```java
+    /*
+        In this program the output (0,0) is not possible
+
+        Because of volatile and program order we have 
+            (Program order)
+                𝑜𝑛𝑒(𝑎 ≔ 1) → 𝑜𝑛𝑒(𝑥 ≔ 𝑏) and
+                𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1) → 𝑜𝑡ℎ𝑒𝑟(𝑦 ≔ 𝑎)
+            (Volatile)
+                𝑜𝑛𝑒(𝑎 ≔ 1) → 𝑜𝑡ℎ𝑒𝑟(𝑦 ≔ 𝑎) or o𝑡ℎ𝑒𝑟(𝑦 ≔ 𝑎) → 𝑜𝑛𝑒(𝑎 ≔ 1) and
+                𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1) → 𝑜𝑛𝑒(𝑥 ≔ 𝑏) or 𝑜𝑛𝑒(𝑥 ≔ 𝑏) → 𝑜𝑡ℎ𝑒𝑟(𝑏 ≔ 1)
+            None of the interleavings can satisfy these two properties. Thus, (0,0) is not possible
+    */
+
+    // shared variables
+    x=0;
+    y=0;
+    volatile a=0;
+    volatile b=0;
+    
+    // Threads definition
+    Thread one = new Thread(() -> {
+        a=1;   
+        x=b;   
+    });
+    Thread other = new Thread(() -> {
+        b=1;   
+        y=a;   
+    });
+
+    one.start();other.start();
+    one.join();other.join();
+    System.out.println("("+x+","+y+")");
+    ```
+    <u>Why isn´t it necessary to declare x and y volatile as well?</u> Because x and y are only read after the join, so there is already a happens-before relation between the write and the read.
