@@ -82,7 +82,7 @@ Yes. A way to read the implication is: “Can we have thread-safe programs if we
                 private static Resource resource;
                 public static Resource getInstance() {
                     if (resource == null)
-                        resource = new Resource();
+                        resource = new zzResource();
                     return resource;
                 }
             }
@@ -146,7 +146,7 @@ instance of Resource. With the last thread’s instance being the value that sta
         * To ensure thread-safety of immutable classes you **simply** need to make sure:
             * Objects are safely published (==Since immutable objects do not change the state after initialization, data races can only occur during initialization==)
             * No fields can be modified after publication
-            * Access to inner mutable object do not escape
+            * Access to inner mutable object do not escape··11111111111111111111111111111111111
                 ```java
                 public final class ThreeStooges {
                     private final Set<String> stooges = new HashSet<String>();
