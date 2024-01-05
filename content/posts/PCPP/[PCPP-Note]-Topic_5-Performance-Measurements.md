@@ -189,13 +189,39 @@ public class countPrimesTask implements Runnable {
 ```
 
 * Shortcomings:
-    1. How to stop?    
+    1. How to stop? (as long as submit the task, it will not wait, the program will end immediately 
+        * 这里和之前算法中的递归不相同，之前的递归调用处直到获得结果才返回，但这里是向线程池提交，返回的时候任务不一定执行完)
     3. Returning result (# primes)
 
-<br>
-Thread vs Executor
+* Thread vs Executor
+    * Counting primes in the range 2..1_000_000s
+        * Sequential 1.2 Sec
+        * Threads (4) 0.5 Sec
+        * Executor 0.4 Sec
 
-* Counting primes in the range 2..1_000_000s
-    * Sequential 1.2 Sec
-    * Threads (4) 0.5 Sec
-    * Executor 0.4 Sec
+<br>
+
+**Combining tasks**
+```java
+@Override
+    public void run() {
+        if ((high-low) < threshold) { 
+            for (int i=low; i<=high; i++) if (isPrime(i)) lc.increment();
+        } else {
+            int mid= low+(high-low)/2;
+            Future<?> f1 = pool.submit(new countPrimesTask(lc, low, mid, pool, threshold) );
+            Future<?> f2 = pool.submit(new countPrimesTask(lc, mid+1, high, pool, threshold) );
+
+            try { f1.get();f2.get(); }
+            catch (InterruptedException | ExecutionException e) { }
+    }
+}
+```
+* Shortcomings:
+
+    1. Returning result (# primes)
+
+<u>Does the order of f1.get and f2.get matter?</u>
+No. Two tasks run independently, and it's uncertain which one will finish first. Even if Task 2 finishes first, it still has to wait T1.\
+<u>How do we get the result # primes ?</u>
+do lc++ in if, and get the final result of the global variable lc.
