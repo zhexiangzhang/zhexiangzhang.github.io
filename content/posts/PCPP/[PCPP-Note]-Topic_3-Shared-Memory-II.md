@@ -216,7 +216,9 @@ increases the capacity by one (c++)
         // We can also impose this constraint(number of readers/writers) by implementing monitor condition instead of need a semaphore
         ```
 * <u>If we set the capacity of a semaphore to 1, does it behave like a lock?</u> Depends on the behaviour of release. If release increases the capacity of the semaphore when c==1, then no. But if the semaphore does not increase capacity when c==1, then yes.
-
+* Java semaphores have a fair flag so 
+that their entry queue prioritizes 
+the longest waiting thread `Semaphore semReaders = new Semaphore(5,true);`
 ### Barriers
 * Barriers are synchronization primitives used to wait until several thread reach some point in their computation
 * Barriers consists of:

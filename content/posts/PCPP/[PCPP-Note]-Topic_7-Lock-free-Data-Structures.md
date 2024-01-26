@@ -222,6 +222,8 @@ class SimpleLock {
 
 • It is a memory allocation issue which affects mainly languages 
 without garbage collection (e.g., C and C++)\
+*  在C++中，我们对指针(类比于JAVA中的引用)采用CAS操作，那么即使两个指针相同，他们也未必引用同一个对象，有可能是第一个指针所指向的内存被释放后，第二个对象恰好分配在相同地址的内存。
+
 • Languages such as Java do not have this problem because 
 garbage collection ensures that newly created objects are 
 fresh
