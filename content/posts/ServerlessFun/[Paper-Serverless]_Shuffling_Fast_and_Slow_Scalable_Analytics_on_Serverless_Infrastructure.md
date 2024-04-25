@@ -27,7 +27,7 @@ and hence the sender and receiver workers might not be executing at the same tim
 receiver overlap, given the execution time limit, there might
 not be enough time to transfer all the necessary data.
   * intermediate data between stages need to be persisted on shared storage.
-<img src="../../../static/images/paper/1.png" alt="" width="60%"> 
+<img src="../../../images/paper/1.png" alt="" width="60%"> 
   
     `note1:` functions have resource limitations (memoey here) which limits the
 amount of data a function can process in one task. So we need lots of Map Tasks and Merge Tasks. So that the inputs to the tasks can be less than the memory footprint of a function. 
@@ -38,7 +38,7 @@ amount of data a function can process in one task. So we need lots of Map Tasks 
     storage main characteristic: read and write throughput (in terms of request/sec, referred as IOPS) and bandwidth (in terms of bytes/sec)
 
     can be a bottleneck (note: each request respond to single file)
-    <img src="../../../static/images/paper/3.png" alt="" width="70%"> 
+    <img src="../../../images/paper/3.png" alt="" width="70%"> 
 
     Also, these values (IOPS / bandwidth) are not stable as we change the degree of parallelism and worker memory size.
 
@@ -55,11 +55,11 @@ each round we range-partition the data into a number of
 buckets in fast storage and then combine the partitioned
 ranges using the slow storage. We reuse the same range partitioner across rounds. 
 
-<img src="../../../static/images/paper/4.png" alt="" width="70%"> 
+<img src="../../../images/paper/4.png" alt="" width="70%"> 
 
 In this way, we can use a merge stage
 at the end to combine results across all rounds, as illustrated
 in Figure 3. For example, a 100 TB sort can be broken down
 to 100 rounds of 1TB sort, or 10 rounds of 10TB sort
 
-<img src="../../../static/images/paper/5.png" alt="" width="80%"> 
+<img src="../../../images/paper/5.png" alt="" width="80%"> 
