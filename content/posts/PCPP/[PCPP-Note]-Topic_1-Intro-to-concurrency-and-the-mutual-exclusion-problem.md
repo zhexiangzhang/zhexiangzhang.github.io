@@ -107,7 +107,7 @@ running on the same processor.
  * Each threads works at its own speed (cant make assumption)
  * Each thread has its own local memory
  * Threads can communicate via shared memory
- * <img src="../../../static/images/pcpp/1.png" alt="" width="30%">
+ * <img src="../../../images/pcpp/1.png" alt="" width="30%">
 
     * Blocked state: eg: When a thread tries to access a synchronized block or method, but another thread already holds the lock.The thread will move from the blocked state to runnable state when it acquires the lock.
     * Waiting state (not in this picture): The thread will be in waiting state when it calls wait() method or join() method. It will move to the runnable state when other thread will notify.
@@ -153,7 +153,7 @@ To answer this question we need to understand
   * The statements in a thread are executed when the thread is in its “running” state 
 
 
-  * <img src="../../../static/images/pcpp/1.png" alt="" width="50%">
+  * <img src="../../../images/pcpp/1.png" alt="" width="50%">
 * **<span style="color:DarkTurquoise;">Non-determinism </span>**
   * In OS, scheduler selects the processes/threads to be execute
   * Threads are selected <span style="color:red;">non-deterministically</span>, i.e., no assumptions can be made about what thread will be executed next

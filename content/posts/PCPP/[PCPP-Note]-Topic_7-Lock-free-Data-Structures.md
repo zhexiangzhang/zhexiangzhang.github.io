@@ -1,7 +1,9 @@
 ---
 title: "[PCPP Note] Topic_7 Lock Free Data Structures"
 date: 2024-01-03T17:03:28+01:00
-draft: true
+type: post
+tags: ["PCPP"]
+showTableOfContents: true
 ---
 
 # Topic 7: Lock Free Data Structures

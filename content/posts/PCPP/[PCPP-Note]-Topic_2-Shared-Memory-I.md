@@ -385,7 +385,7 @@ try{Thread.sleep(500);}catch(…){…}
 running = false;
 System.out.println("Main");
 ```
-<img src="../../../static/images/pcpp/3.png" alt="" width="60%">
+<img src="../../../images/pcpp/3.png" alt="" width="60%">
 
 <br>
 

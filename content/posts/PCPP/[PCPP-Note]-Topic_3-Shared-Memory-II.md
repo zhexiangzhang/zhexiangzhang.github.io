@@ -1,7 +1,9 @@
 ---
 title: "[PCPP Note] Topic_3 Shared Memory II"
 date: 2023-12-20T01:19:50+01:00
-draft: true
+type: post
+tags: ["PCPP"]
+showTableOfContents: true
 ---
 # Topic 3: Shared Memory II
 

@@ -1,7 +1,9 @@
 ---
 title: "[PCPP Note] Topic_5 Performance Measurements"
 date: 2023-12-22T19:15:20+01:00
-draft: true
+type: post
+tags: ["PCPP"]
+showTableOfContents: true
 ---
 
 # Topic 5: Performance Measurements

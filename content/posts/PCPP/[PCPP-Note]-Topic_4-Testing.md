@@ -1,7 +1,9 @@
 ---
 title: "[PCPP Note] Topic_4 Testing"
 date: 2023-12-22T14:04:42+01:00
-draft: true
+type: post
+tags: ["PCPP"]
+showTableOfContents: true
 ---
 
 # Topic 4: Testing

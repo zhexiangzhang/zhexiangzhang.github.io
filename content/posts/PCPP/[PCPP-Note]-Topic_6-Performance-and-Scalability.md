@@ -1,7 +1,9 @@
 ---
 title: "[PCPP Note] Topic_6 Performance and Scalability"
 date: 2024-01-03T09:43:03+01:00
-draft: true
+type: post
+tags: ["PCPP"]
+showTableOfContents: true
 ---
 
 # Topic 6: Performance and Scalabilitys
@@ -183,6 +185,6 @@ try {
 
 **Lock striping**
 
-<img src="../../../static/images/pcpp/4.png" alt="" width="60%">
+<img src="../../../images/pcpp/4.png" alt="" width="60%">
 
-<img src="../../../static/images/pcpp/5.png" alt="" width="60%">
+<img src="../../../images/pcpp/5.png" alt="" width="60%">
