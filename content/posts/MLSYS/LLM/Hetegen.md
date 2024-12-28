@@ -14,12 +14,6 @@ showTableOfContents: true
 > Xuanlei Zhao, Yang You \
 > National University of Singapore
 
-
-<!-- serving LLM model with limited GPU memory is importance topic. exist system store all the parameter in CPU and transfer it to the GPU when request coming, this cause lots of latency caused by slow trnasfer via PCIE. In this work, HETEGAN use cpu to 承担 part of compute. （i.euse tensor parallism to split the model on ration, the ratio is make force the guide of T(CPU) + T(trans) = T(GPU) --> (the ratio is decided before inference by profiling, and the ratio level is linear level (eg. transfomer have q,k,v each of them have a liner layer and have different ratio.))
-
-besides these, HETEGAN also use pinned memory to increase concurrent level， and it will also dynamic transfer models in CPU back to gpu when there are more gpu memory available. the priority is decide by (g = T(cpu) / M(gpu))
-
-
 ## Background
 
 When serving LLMs with limited GPU memory, Existing systems often offload some model parameters in CPU memory and transfer them to the GPU during inference, causing high latency due to the slow PCIe transfer. 
