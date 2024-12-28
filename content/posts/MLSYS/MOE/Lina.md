@@ -15,9 +15,9 @@ showTableOfContents: true
 
 Existing MoE systems [DeepSpeed, Tutel, Gshard, ...] allocate one unique compute device (e.g., GPU) for each expert in expert parallelism. An all-to-all communication is then needed to send tokens to their experts selected by the gating network, and another all-to-all is needed to send tokens back to the device they belong to in data parallelism to finish the rest of the forward pass.
 Sites\zzxBlog\static\images\MOE\Lina_2.png
-<img src="../../../../images/MOE/Lina_1.png" alt="" width="45%">
+<br><img src="../../../../images/MOE/Lina_1.png" alt="" width="55%">
 <br>
-<img src="../../../../images/MOE/Lina_2.png" alt="" width="45%">
+<br><img src="../../../../images/MOE/Lina_2.png" alt="" width="55%">
 
 ## Problem
 
