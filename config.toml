@@ -11,7 +11,8 @@ pygmentsStyle = "monokai"
 
 [params]
   footer = "Zhexiang Zhang"
-  description = " \"Land is a ship too big for me\" —— The Legend of 1900"
+  # description = " \"Land is a ship too big for me\" —— The Legend of 1900"
+  description = " \"Per aspera ad astra\""
   avatarURL = "/images/Hi.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"

@@ -22,13 +22,14 @@ When serving LLMs with limited GPU memory, Existing systems often offload some m
 
 HeteGen introduces a novel approach by utilizing the CPU not only for storage but also to offload part of the computation. Specifically, it employs heterogeneous tensor parallelism, splitting model computations between the CPU and GPU based on a pre-determined ratio. This ratio is designed to ensure that T(CPU) = T(GPU) + T(COM). 
 
-<br><img src="../../../../images/LLM/Hetegen_1.png" alt="" width="55%">
+<br><img src="../../../../images/LLM/Hetegen_1.png" alt="" width="40%">
+
 PS: While CPU computation is underway, model parameters are conveyed to the GPU. The GPU, in turn, generates results once the communication process is completed.
 
 # Some details
 (1) The ratio is determined through profiling each module before inference and is applied at the granularity of individual linear layers, such as the Q, K, and V layers in Transformers, with each layer having its own optimized ratio.
 
-<br><img src="../../../../images/LLM/Hetegen_2.png" alt="" width="55%">
+<br><img src="../../../../images/LLM/Hetegen_2.png" alt="" width="50%">
 
 Optimization:
 (1) HeteGen also leverages pinned memory to improve concurrency
@@ -43,6 +44,7 @@ Workload:
 * prefill lengths 512 
 * batch size 1
 * generated length 64 
-<br><img src="../../../../images/LLM/Hetegen_3.png" alt="" width="55%">
-
 Metric: throughput of generating tokens under different scenarios 
+
+<br><img src="../../../../images/LLM/Hetegen_3.png" alt="" width="90%">
+
