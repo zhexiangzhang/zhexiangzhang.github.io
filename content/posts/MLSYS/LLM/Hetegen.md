@@ -41,10 +41,9 @@ Optimization:
 * GPU and CPU communicate via PCIE.
 
 Workload: 
-* prefill lengths 512 
-* batch size 1
-* generated length 64 
+* prefill lengths 512, generated length 64, <span style="color:DarkTurquoise;">batch size 1</span>
+
 Metric: throughput of generating tokens under different scenarios 
 
-<br><img src="../../../../images/LLM/Hetegen_3.png" alt="" width="90%">
+<br><img src="../../../../images/LLM/Hetegen_3.png" alt="" width="80%">
 
