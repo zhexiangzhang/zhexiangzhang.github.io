@@ -1,6 +1,6 @@
 ---
 title: "FIDDLER: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models"
-date: 2024-06-06T19:47:17+08:00
+date: 2024-12-27
 type: post
 tags: ["LLM", "MOE", "Inference System", "Heterogeneous"]
 showTableOfContents: true
@@ -31,6 +31,3 @@ which has more than 90GB of parameters, to generate over 3 tokens per second on 
 with 24GB memory. Compared to existing offloading methods, Fiddler improves the single-batch
 inference latency by 8.2 times on Quadro RTX 6000 and 10.1 times on L4 GPU on average across
 different input/output lengths.
-## Problem
-
-Distributed MoE training and inference is inefficient, mainly due to the interleaved all-to-al

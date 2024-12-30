@@ -13,7 +13,8 @@ pygmentsStyle = "monokai"
   footer = "Zhexiang Zhang"
   description = " \"Land is a ship too big for me\" —— The Legend of 1900"
   # description = " \"Per aspera ad astra\""
-  avatarURL = "/images/Hi.jpg"
+  avatarURL = "/images/hi4.jpg"
+  # avatarURL = "/images/Hi.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"  
   customHeadHTML = """
@@ -88,8 +89,8 @@ pygmentsStyle = "monokai"
 
   [[menu.main]]
     identifier = "rss"
-    pre = "<span data-feather='rss'></span>"
-    url = "/index.xml"
+    pre = "<span data-feather='book'></span>"
+    url = "https://scholar.google.com/citations?user=h4PtwRgAAAAJ&hl=zh-CN"
     weight = 8
 
 [markup]

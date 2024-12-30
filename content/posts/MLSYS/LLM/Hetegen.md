@@ -16,7 +16,7 @@ showTableOfContents: true
 
 ## Background
 
-When serving LLMs with limited GPU memory, Existing systems often offload some model parameters in CPU memory and transfer them to the GPU during inference, causing high latency due to the slow PCIe transfer. 
+When serving LLMs with limited GPU memory, Existing systems often offload some model parameters in CPU memory and transfer them to the GPU during inference, causing high latency due to the slow PCIe transfer.
 
 # Solution
 
