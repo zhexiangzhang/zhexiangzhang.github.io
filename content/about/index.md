@@ -7,9 +7,8 @@ draft: false
 ## About Me
 
 <!-- I am a Master at University of Copenhagen, supervised by [Prof Yongluan Zhou](https://ylzhou.github.io/). -->
-I am a Master at <a href="https://www.ku.dk/en" class="custom-link">University of Copenhagen</a>, supervised by Prof <a href="https://ylzhou.github.io/" class="custom-link">Yongluan Zhou</a>.
-
-
+I got my master degree from <a href="https://www.ku.dk/en" class="custom-link">University of Copenhagen</a>, supervised by Prof <a href="https://ylzhou.github.io/" class="custom-link">Yongluan Zhou</a>.
+ 
 ## Research Interests
 Distributed System, ML System
 
