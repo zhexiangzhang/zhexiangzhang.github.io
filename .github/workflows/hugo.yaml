@@ -64,7 +64,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-
+        # 新增：检查生成的 public 文件夹是否正常
+      - name: Check Hugo output
+        run: ls -lah ./public
   # Deployment job
   deploy:
     environment:
