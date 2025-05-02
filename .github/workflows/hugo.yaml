@@ -64,7 +64,13 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
-
+          
+      - name: Dummy use of upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dummy
+          path: ./nonexistent-path
+          if-no-files-found: ignore
   # Deployment job
   deploy:
     environment:
