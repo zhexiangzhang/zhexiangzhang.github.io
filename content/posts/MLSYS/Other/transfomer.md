@@ -49,7 +49,7 @@ Q, K, V: 为矩阵X与权重矩阵$W^q$,$W^k$,$W^v$的乘积，本质上都是X�
 
 总时间复杂度$O(n^2d)+O(n^2)+O(n^2d)=O(n^2d)$
 
-
+[使用KV Cache后，计算复杂度可以降低到O(n⋅d)，显著减少了计算量。]
 
 
 ## <a href="https://zhuanlan.zhihu.com/p/410776234" class="custom-link">Multi-Head Attention</a>
