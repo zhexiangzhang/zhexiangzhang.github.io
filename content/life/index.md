@@ -7,4 +7,4 @@ draft: false
 
 ## Travel
 <p><i>“Life is a journey. I am on my way.”</i></p>
-<img src="../../../../images/travelMap.jpg" alt="" width="120%">
+<img src="../../../../images/travelMap20250503.png" alt="" width="120%">
