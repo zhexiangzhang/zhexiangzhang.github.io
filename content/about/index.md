@@ -11,9 +11,10 @@ draft: false
     <img src="/images/avatar.jpg" alt="Zhexiang Zhang" />
   </div>
   <div class="about-me-info">
-    PhD Student @ <a href="https://www.unimelb.edu.au/" class="custom-link">University of Melbourne</a>.
+    1st-year Ph.D. @ University of Melbourne.
     <br>
     Advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link">Adel N. Toosi</a>, Prof. <a href="https://mincyu.github.io/" class="custom-link">Minchen Yu</a>, and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Xingliang Yuan</a>.
+    <div style="margin-top: 0.5em;">Email: <a href="mailto:zhexiangzhang@163.com" class="custom-link">zhexiangzhang@163.com</a></div>
   </div>
 </div>
 
