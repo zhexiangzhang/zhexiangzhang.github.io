@@ -244,4 +244,130 @@ draft: false
     </div>
   </div>
 
+  <div class="timeline-item">
+    <div class="timeline-header">
+      <span class="timeline-dot"></span>
+      <span class="timeline-place">Tokyo, Japan</span>
+      <span class="timeline-date">August 2024</span>
+    </div>
+    <div class="timeline-photos">
+      <div class="photo-grid three-col">
+        <div class="photo-grid-item">
+          <img src="/images/life/tokyo/1.jpg" alt="Tokyo" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/tokyo/2.jpg" alt="Tokyo" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/tokyo/3.jpg" alt="Tokyo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-header">
+      <span class="timeline-dot"></span>
+      <span class="timeline-place">Oslo, Norway</span>
+      <span class="timeline-date">October 2024</span>
+    </div>
+    <div class="timeline-photos">
+      <div class="photo-grid three-col">
+        <div class="photo-grid-item">
+          <img src="/images/life/oslo/1.jpg" alt="Oslo" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/oslo/2.jpg" alt="Oslo" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/oslo/3.jpg" alt="Oslo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-header">
+      <span class="timeline-dot"></span>
+      <span class="timeline-place">Istanbul, Turkey</span>
+      <span class="timeline-date">November 2024</span>
+    </div>
+    <div class="timeline-photos">
+      <div class="photo-grid three-col">
+        <div class="photo-grid-item">
+          <img src="/images/life/istanbul/1.jpg" alt="Istanbul" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/istanbul/2.jpg" alt="Istanbul" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/istanbul/3.jpg" alt="Istanbul" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-header">
+      <span class="timeline-dot"></span>
+      <span class="timeline-place">Athens, Greece</span>
+      <span class="timeline-date">November 2024</span>
+    </div>
+    <div class="timeline-photos">
+      <div class="photo-grid three-col">
+        <div class="photo-grid-item">
+          <img src="/images/life/athens/1.jpg" alt="Athens" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/athens/2.jpg" alt="Athens" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/athens/3.jpg" alt="Athens" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-header">
+      <span class="timeline-dot"></span>
+      <span class="timeline-place">Florence, Italy</span>
+      <span class="timeline-date">December 2024</span>
+    </div>
+    <div class="timeline-photos">
+      <div class="photo-grid three-col">
+        <div class="photo-grid-item">
+          <img src="/images/life/florence/1.jpg" alt="Florence" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/florence/2.jpg" alt="Florence" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/florence/3.jpg" alt="Florence" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-header">
+      <span class="timeline-dot"></span>
+      <span class="timeline-place">Bangkok, Thailand</span>
+      <span class="timeline-date">January 2026</span>
+    </div>
+    <div class="timeline-photos">
+      <div class="photo-grid three-col">
+        <div class="photo-grid-item">
+          <img src="/images/life/bangkok/1.jpg" alt="Bangkok" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/bangkok/2.jpg" alt="Bangkok" />
+        </div>
+        <div class="photo-grid-item">
+          <img src="/images/life/bangkok/3.jpg" alt="Bangkok" />
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
