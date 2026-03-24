@@ -2,7 +2,7 @@
 # title: "Life"
 date: 2024-12-28T00:00:00+08:00
 draft: false
-#https://www.mapchart.net/world.html
+# Map style config: import /static/worldmap/mapchartSave__world__.txt at https://www.mapchart.net/world.html to regenerate
 ---
 
 ## Travel

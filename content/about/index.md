@@ -6,23 +6,52 @@ draft: false
 
 ## About Me
 
-<!-- PhD Student@<a href="https://www.unimelb.edu.au/" class="custom-link">UniMelb</a>, advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link">Adel N. Toosi</a> and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Xingliang Yuan</a>. -->
-PhD Student@UniMelb, advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link">Adel N. Toosi</a> and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Xingliang Yuan</a>.
+<div class="about-me-section">
+  <div class="about-me-img">
+    <img src="/images/avatar.jpg" alt="Zhexiang Zhang" />
+  </div>
+  <div class="about-me-info">
+    PhD Student @ <a href="https://www.unimelb.edu.au/" class="custom-link">University of Melbourne</a>.
+    <br>
+    Advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link">Adel N. Toosi</a>, Prof. <a href="https://mincyu.github.io/" class="custom-link">Minchen Yu</a>, and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Xingliang Yuan</a>.
+  </div>
+</div>
 
-<!-- Msc Student@UCPH, advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link"></a> and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Yongluan Zhou</a>. -->
-<!-- I am a Master at University of Copenhagen, supervised by [Prof Yongluan Zhou](https://ylzhou.github.io/). -->
-<!-- I’m a Ph.D. student at Faculty of Engineering and Information Technology in University of Melbourne, advised by Prof. Adel N. Toosi and Prof. Xingliang Yuan. -->
-<!-- I got my master degree from <a href="https://www.ku.dk/en" class="custom-link">University of Copenhagen</a>, supervised by Prof <a href="https://ylzhou.github.io/" class="custom-link">Yongluan Zhou</a>. -->
- 
 ## Research Interests
-Distributed System, LLM inference systems, Serverless Computing
+Efficient and Scalable AI Systems, Distributed System, Serverless Computing
 
 ## Publications
-<small>
-- Rodrigo Laigner, <strong>Zhexiang Zhang</strong>, Yijian Liu, Leonardo Gomes, and Yongluan Zhou. <em><a href="https://arxiv.org/abs/2403.12605" class="custom-link">Online Marketplace: A Benchmark for Data Management in Microservices</a></em>. In <strong>SIGMOD’25</strong>, International Conference on Management of Data, June 22-27, 2025, Berlin, Germany.<br>
-<!-- - Liang Zhu, Feiteng Fang, Yuelin Bai, Longze Chen, <strong>Zhexiang Zhang</strong>, Minghuan Tan, and Min Yang. <em><a href="https://aclanthology.org/2024.findings-emnlp.1041" class="custom-link">DEFT: Distribution-guided Efficient Fine-Tuning for Human Alignment</a></em>. In <strong>Findings of EMNLP 2024</strong>, November 2024, pages 15318–15331. -->
 
-</small>
+<div class="pub-entry">
+  <div class="pub-img">
+    <img src="/images/paper/janus-moe.png" alt="Janus" />
+    <span class="pub-badge">arXiv</span>
+  </div>
+  <div class="pub-info">
+    <div class="pub-title"><a href="https://arxiv.org/abs/2512.13525">Janus: Disaggregating Attention and Experts for Scalable MoE Inference</a></div>
+    <div class="pub-authors"><strong>Z Zhang*</strong>, Y Wang*, X Wang, Y Zhao, J Jiang, Q Weng, S Shi, Y Chen, M Yu</div>
+    <div class="pub-venue"><em>arXiv preprint arXiv:2512.13525, 2025.</em></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/abs/2512.13525" target="_blank">PDF</a>
+    </div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-img">
+    <img src="/images/paper/sigmod-marketplace.png" alt="Online Marketplace" />
+    <span class="pub-badge">SIGMOD</span>
+  </div>
+  <div class="pub-info">
+    <div class="pub-title"><a href="https://arxiv.org/abs/2403.12605">Online Marketplace: A Benchmark for Data Management in Microservices</a></div>
+    <div class="pub-authors">R Laigner, <strong>Z Zhang</strong>, Y Liu, L Gomes, Y Zhou</div>
+    <div class="pub-venue"><em>ACM SIGMOD International Conference on Management of Data, 2025.</em></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/abs/2403.12605" target="_blank">PDF</a>
+      <a href="https://github.com/diku-dk/OnlineMarketplaceBenchmark" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
 
 
 

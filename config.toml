@@ -10,14 +10,17 @@ enableRobotsTXT = true
 pygmentsStyle = "monokai"
 
 [params]
+  accentColor = "#4A90D9"
   footer = "Zhexiang Zhang"
   description = " \"Land is a ship too big for me\" —— The Legend of 1900"
   # description = " \"Per aspera ad astra\""
-  avatarURL = "/images/hi6.jpg"
+  # avatarURL = "/images/avatar.jpg"
   # avatarURL = "/images/Hi.jpg"
   AvatarAltText = "avatar"
   avatarSize = "size-m"  
   customHeadHTML = """
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
@@ -45,17 +48,17 @@ pygmentsStyle = "monokai"
   metaKeywords = ["blog", "gokarna", "hugo"]
 
 [menu]
+#  [[menu.main]]
+#    name = "Home"
+#    pre = "<span data-feather='home'></span>"
+#    url = "/"
+#    weight = 1
+
   [[menu.main]]
     name = "Home"
     pre = "<span data-feather='home'></span>"
     url = "/"
     weight = 1
-
-  [[menu.main]]
-    name = "About"
-    pre = "<span data-feather='user'></span>"
-    url = "/about/"
-    weight = 2  
 
   [[menu.main]]
     name = "Posts"
