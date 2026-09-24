@@ -6,22 +6,41 @@ draft: false
 
 ## About Me
 
-<div class="about-me-section">
-  <div class="about-me-img">
-    <img src="/images/avatar.jpg" alt="Zhexiang Zhang" />
+<div class="about-profile">
+  <img src="/images/avatar.jpg" alt="Zhexiang Zhang" />
+  <div class="about-bio">
+    <p>I am a second-year PhD student at the University of Melbourne, advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link">Adel N. Toosi</a> and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Xingliang Yuan</a>. I am also a visiting PhD student at CUHK-Shenzhen, supervised by Prof. <a href="https://mincyu.github.io/" class="custom-link">Minchen Yu</a>.</p>
+    <div class="about-contact">Email: <a href="mailto:zhexiangzhang@163.com" class="custom-link">zhexiangzhang@163.com</a></div>
   </div>
-  <div class="about-me-info">
-    1st-year Ph.D. @ University of Melbourne.
-    <br>
-    Advised by Prof. <a href="https://adelnadjarantoosi.info/" class="custom-link">Adel N. Toosi</a>, Prof. <a href="https://mincyu.github.io/" class="custom-link">Minchen Yu</a>, and Prof. <a href="https://xyuancs.github.io/" class="custom-link">Xingliang Yuan</a>.
-    <div style="margin-top: 0.5em;">Email: <a href="mailto:zhexiangzhang@163.com" class="custom-link">zhexiangzhang@163.com</a></div>
-  </div>
+</div>
+
+## Internship
+
+<div class="internship-entry">
+  <span class="internship-role">Research Intern</span>
+  <span>@ Alibaba</span>
 </div>
 
 ## Research Interests
 Efficient and Scalable AI Systems, Distributed System, Serverless Computing
 
 ## Publications
+
+<div class="pub-entry">
+  <div class="pub-img">
+    <img src="/images/paper/pixelflow-architecture.svg" alt="PixelFlow architecture" />
+    <span class="pub-badge">arXiv</span>
+  </div>
+  <div class="pub-info">
+    <div class="pub-title"><a href="https://arxiv.org/abs/2609.20723">PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving</a></div>
+    <div class="pub-authors"><strong>Z Zhang</strong>, M Yu, Y Sun, X Bai, X Yuan, A N. Toosi</div>
+    <div class="pub-venue"><em>arXiv preprint arXiv:2609.20723, 2026.</em></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2609.20723" target="_blank">PDF</a>
+      <a href="https://arxiv.org/html/2609.20723v1" target="_blank">HTML</a>
+    </div>
+  </div>
+</div>
 
 <div class="pub-entry">
   <div class="pub-img">
@@ -53,8 +72,3 @@ Efficient and Scalable AI Systems, Distributed System, Serverless Computing
     </div>
   </div>
 </div>
-
-
-
-
-
